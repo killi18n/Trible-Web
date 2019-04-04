@@ -11,7 +11,7 @@ const router = new Router()
 
 const buildDir = path.join(__dirname, '../../build')
 
-router.get('/', ssr)
+router.get('/.netlify/functions/server', ssr)
 
 app.use(bodyParser({ encoding: 'utf-8' }))
 app.use(router.routes()).use(router.allowedMethods())
