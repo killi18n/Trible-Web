@@ -1,0 +1,33 @@
+@import '~styles/utils.scss';
+
+.CenterSentence {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    height: calc(100vh - 100px - 75px);
+
+    @include media('<873px') {
+        align-items: flex-start;
+    }
+
+    .trails-text {
+        font-family: 'Nanum Pen Script', cursive;
+        font-size: 65px;
+        color: #02021d;
+        user-select: none;
+        @include media('<570px') {
+            // color: rgba(181, 199, 210, 100);
+            font-size: 55px;
+        }
+
+        @include media('<322px') {
+            font-size: 45px;
+        }
+    }
+}

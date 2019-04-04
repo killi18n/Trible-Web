@@ -1,0 +1,25 @@
+@import '~styles/utils.scss';
+
+.Base {
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    // background-image: url('../../../images/background-1.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    .OpacityLayer {
+        background: rgba(241, 243, 245, 0.1);
+    }
+
+    main {
+        height: calc(100vh - 100px);
+    }
+}

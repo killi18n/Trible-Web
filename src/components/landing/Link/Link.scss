@@ -1,0 +1,33 @@
+@import '~styles/utils.scss';
+
+.Link {
+    // margin-left: 0.25rem;
+
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: rgba(241, 243, 245, 0.7);
+    height: 100%;
+    opacity: 1.0;
+
+    cursor: pointer;
+    user-select: none;
+
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 2rem;
+    &:hover {
+        opacity: 2;
+        background: rgba(241, 243, 245, 0.7);
+    }
+
+    &:active {
+        opacity: 1;
+        background: rgba(241, 243, 245, 1);
+    }
+
+    @include media('<=medium') {
+        font-size: 1.25rem;
+    }
+}

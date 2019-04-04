@@ -1,0 +1,62 @@
+@import '~styles/utils.scss';
+
+.Header {
+    position: relative;
+    height: 100px;
+    border: solid 0 #979797;
+    background: rgba(241, 243, 245, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Center {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        .Title {
+            // margin-left: auto;
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 80px;
+            color: #02021d;
+            user-select: none;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .HeaderIcon {
+            width: 45px;
+            height: 45px;
+            box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            margin-left: 1rem;
+            background-image: url('../../../images/HeaderIcon.png');
+            background-size: cover;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .Right {
+        display: flex;
+        margin-right: 1rem;
+        .Menu {
+            cursor: pointer;
+            // color: #02021d;
+            font-size: 3rem;
+            color: #02021d;
+            &:hover {
+                color: $oc-gray-8;
+            }
+
+            &:active {
+                color: #02021d;
+            }
+        }
+    }
+}
