@@ -5,6 +5,7 @@
     "dependencies": {
         "@babel/core": "7.2.2",
         "@svgr/webpack": "4.1.0",
+        "aws-sdk": "^2.436.0",
         "babel-core": "7.0.0-bridge.0",
         "babel-eslint": "9.0.0",
         "babel-jest": "23.6.0",
@@ -72,10 +73,11 @@
         "start": "node scripts/start.js",
         "start:server": "node ./server/src",
         "start_dev:server": "nodemon ./server/src/server-local.js",
-        "build": "node scripts/build.js",
+        "build": "node scripts/build.js && node ./s3Uploader.js",
         "build:server": "node scripts/build.server.js",
         "build:netlify": "NODE_ENV=production netlify-lambda build server/netlify",
-        "test": "node scripts/test.js"
+        "test": "node scripts/test.js",
+        "deploy:all": "yarn build && yarn build:server && cd serverless && yarn deploy"
     },
     "eslintConfig": {
         "extends": "react-app"

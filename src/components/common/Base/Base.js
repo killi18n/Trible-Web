@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import classnames from 'classnames'
 import { useTransition, animated, config } from 'react-spring'
 import styles from './Base.scss'
-import Background1 from 'images/background-1.jpg'
-import Background2 from 'images/background-2.jpg'
-import Background3 from 'images/background-3.jpg'
 import HeaderContainer from 'containers/HeaderContainer'
 
 const cx = classnames.bind(styles)
 
 const Base = ({ children }) => {
     const slides = [
-        { id: 0, url: Background2 },
-        { id: 1, url: Background1 },
-        { id: 2, url: Background3 },
+        {
+            id: 0,
+            url:
+                'https://s3.ap-northeast-2.amazonaws.com/trible-client-ssr-build/build/static/media/background-2.6169896b.jpg',
+        },
     ]
     const [index, set] = useState(0)
     const transitions = useTransition(slides[index], item => item.id, {
@@ -22,10 +21,6 @@ const Base = ({ children }) => {
         leave: { opacity: 0 },
         config: config.molasses,
     })
-    // useEffect(
-    //     () => void setInterval(() => set(state => (state + 1) % 3), 3000),
-    //     []
-    // )
     return transitions.map(({ item, props, key }) => (
         <animated.div
             key={key}
@@ -36,14 +31,6 @@ const Base = ({ children }) => {
             <main>{children}</main>
         </animated.div>
     ))
-    // return (
-    //     <div className={cx('Base')}>
-    //         <div className={cx('OpacityLayer')}>
-    //             <Header />
-    //             <main>{children}</main>
-    //         </div>
-    //     </div>
-    // )
 }
 
 export default Base
