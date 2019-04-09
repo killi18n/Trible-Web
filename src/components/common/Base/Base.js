@@ -11,7 +11,7 @@ const Base = ({ children }) => {
         {
             id: 0,
             url:
-                'https://s3.ap-northeast-2.amazonaws.com/trible-client-ssr-build/build/static/media/background-2.6169896b.jpg',
+                'https://s3.ap-northeast-2.amazonaws.com/trible-client-ssr-build/background-2.6169896b.jpg',
         },
     ]
     const [index, set] = useState(0)

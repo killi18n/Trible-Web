@@ -35,6 +35,7 @@ const upload = async () => {
                 Bucket: 'trible-client-ssr-build',
                 Key: `build/${filename}`,
                 Body: targetfile,
+                ContentType: 'text/plain',
             }
             const result = await s3.putObject(params).promise()
             console.log(result)
@@ -48,6 +49,7 @@ const upload = async () => {
                 Bucket: 'trible-client-ssr-build',
                 Key: `build/static/css/${filename}`,
                 Body: targetfile,
+                ContentType: 'text/css',
             }
             const result = await s3.putObject(params).promise()
             console.log(result)
@@ -62,6 +64,7 @@ const upload = async () => {
                 Bucket: 'trible-client-ssr-build',
                 Key: `build/static/js/${filename}`,
                 Body: targetfile,
+                ContentType: 'text/javascript',
             }
             const result = await s3.putObject(params).promise()
             console.log(result)
@@ -76,6 +79,7 @@ const upload = async () => {
                 Bucket: 'trible-client-ssr-build',
                 Key: `build/static/media/${filename}`,
                 Body: targetfile,
+                ContentType: 'image/jpeg',
             }
             const result = await s3.putObject(params).promise()
             console.log(result)

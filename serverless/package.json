@@ -22,6 +22,7 @@
     "devDependencies": {
         "@types/aws-lambda": "^8.10.17",
         "@types/node": "^8.0.57",
+        "serverless-domain-manager": "^3.2.1",
         "serverless-offline": "^4.9.4",
         "serverless-webpack": "^5.1.1",
         "source-map-support": "^0.5.6",
