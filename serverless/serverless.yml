@@ -5,6 +5,14 @@ service:
 plugins:
     - serverless-webpack
     - serverless-offline
+    - serverless-domain-manager
+
+custom:
+    customDomain:
+        domainName: trible.com
+        basePath: ''
+        stage: ${self:provider.stage}
+        createRoute53Record: true
 
 provider:
     name: aws

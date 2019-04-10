@@ -6,7 +6,46 @@ class HeaderContainer extends Component {
         menuToggle: false,
     }
 
-    handleMenuToggle = () => {
+    componentDidMount() {
+        this.addListeners()
+    }
+
+    componentWillUnmount() {
+        this.removeListeners()
+    }
+
+    addListeners = () => {
+        if (window) {
+            window.addEventListener('mousedown', this.handleCloseMenu)
+        }
+
+        if (document && document.documentElement) {
+            document.body.addEventListener('mousedown', this.handleCloseMenu)
+        }
+    }
+
+    removeListeners = () => {
+        if (window) {
+            window.removeEventListener('mousedown', this.handleCloseMenu)
+        }
+
+        if (document && document.documentElement) {
+            document.body.removeEventListener('mousedown', this.handleCloseMenu)
+        }
+    }
+
+    handleCloseMenu = e => {
+        e.stopPropagation()
+        if (this.state.menuToggle) {
+            this.setState({
+                ...this.state,
+                menuToggle: false,
+            })
+        }
+    }
+
+    handleMenuToggle = e => {
+        e.stopPropagation()
         this.setState({
             ...this.state,
             menuToggle: !this.state.menuToggle,
