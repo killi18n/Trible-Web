@@ -16,9 +16,9 @@ const serverRender = async ctx => {
         </StaticRouter>
     )
 
-    if (context.isNotFound) {
-        ctx.status = 404
-    }
+    // if (context.isNotFound) {
+    //     ctx.status = 404
+    // }
 
     const helmet = Helmet.renderStatic()
 
