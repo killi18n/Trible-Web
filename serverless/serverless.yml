@@ -9,8 +9,7 @@ plugins:
 
 custom:
     customDomain:
-        domainName: trible.com
-        basePath: ''
+        domainName: tribleapp.co
         stage: ${self:provider.stage}
         createRoute53Record: true
 
@@ -18,6 +17,7 @@ provider:
     name: aws
     runtime: nodejs8.10
     region: ap-northeast-2
+    stage: prod
 
 functions:
     ssr:
