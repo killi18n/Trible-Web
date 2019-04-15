@@ -1,0 +1,42 @@
+@import '~styles/utils.scss';
+
+.NotFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .NotFoundText {
+        color: $oc-gray-8;
+        font-size: 4rem;
+        padding: 1rem;
+        border-radius: 3px;
+        background: rgba(241, 243, 245, 0.2);
+    }
+
+    .NotFoundBack {
+        color: $oc-gray-8;
+        font-weight: 600;
+        margin-top: 1rem;
+        cursor: pointer;
+        background: rgba(241, 243, 245, 0.4);
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        font-size: 1.5rem;
+        border-radius: 3px;
+
+        user-select: none;
+
+        &:hover {
+            background: rgba(241, 243, 245, 0.6);
+        }
+
+        &:active {
+            background: rgba(241, 243, 245, 0.4);
+        }
+    }
+}

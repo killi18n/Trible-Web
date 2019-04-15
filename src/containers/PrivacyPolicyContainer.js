@@ -4,8 +4,9 @@ import PrivacyPolicyPaper from 'components/privacy/PrivacyPolicyPaper'
 
 class PrivacyPolicyContainer extends Component {
     render() {
+        const { pathname } = this.props
         return (
-            <Base>
+            <Base pathname={pathname}>
                 <PrivacyPolicyPaper />
             </Base>
         )

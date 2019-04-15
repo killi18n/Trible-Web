@@ -65,8 +65,9 @@ class LandingContainer extends Component {
 
     render() {
         const { sentence, deviceWidth } = this.state
+        const { pathname } = this.props
         return (
-            <Base>
+            <Base pathname={pathname}>
                 <Links />
                 <CenterSentence sentence={sentence} deviceWidth={deviceWidth} />
             </Base>

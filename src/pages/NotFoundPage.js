@@ -1,8 +1,9 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Base from 'components/common/Base'
+import NotFoundContainer from 'containers/NotFoundContainer'
 
-const NotFoundPage = ({ staticContext }) => {
+const NotFoundPage = ({ staticContext, location }) => {
     if (staticContext) {
         staticContext.isNotFound = true
     }
@@ -11,7 +12,9 @@ const NotFoundPage = ({ staticContext }) => {
             <Helmet>
                 <title>Trible - NotFound(404)</title>
             </Helmet>
-            <Base>NotFoundPage</Base>
+            <Base pathname={location.pathname}>
+                <NotFoundContainer />
+            </Base>
         </>
     )
 }
