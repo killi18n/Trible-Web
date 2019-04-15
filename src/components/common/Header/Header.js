@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
 
 import styles from './Header.scss'
-import Menu from 'components/common/Menu'
-import MenuSelector from '../MenuSelector'
+import MenuContainer from 'containers/MenuContainer'
 
 const cx = classnames.bind(styles)
 
@@ -82,9 +81,7 @@ const Header = ({ menuToggle, onMenuToggle }) => {
                 </Link>
             </div>
             <div className={cx('Right')}>
-                {/* <MdMenu className={cx('Menu')} /> */}
-                <Menu onMenuToggle={onMenuToggle} />
-                <MenuSelector visible={menuToggle} />
+                <MenuContainer />
             </div>
         </div>
     )

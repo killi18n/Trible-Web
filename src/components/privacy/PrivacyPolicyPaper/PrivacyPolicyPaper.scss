@@ -1,0 +1,22 @@
+@import '~styles/utils.scss';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.PrivacyPolicyPaper {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2rem;
+
+    background: rgba(241, 243, 245, 0.2);
+
+    padding-left: 7rem;
+    padding-right: 7rem;
+
+    height: 100%;
+    overflow-y: auto;
+
+    .Contents-Policy {
+        font-size: 1.25rem;
+        .tabbed {
+            margin-left: 1rem;
+        }
+    }
+}
