@@ -1,7 +1,7 @@
 @import '~styles/utils.scss';
 
 .Menu {
-    position: fixed;
+    position: absolute;
     width: 60px;
     height: 60px;
     top: 20px;
@@ -15,4 +15,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include media('<=medium') {
+        width: 30px;
+        height: 30px;
+
+        top: 35px;
+        right: 20px;
+
+        font-size: 0.75rem;
+    }
 }

@@ -10,6 +10,11 @@
     padding-left: 7rem;
     padding-right: 7rem;
 
+    @include media('<=medium') {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     height: 100%;
     overflow-y: auto;
 

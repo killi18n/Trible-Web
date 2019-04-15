@@ -25,6 +25,10 @@
             flex: 1;
             display: flex;
             justify-content: center;
+
+            @include media('<=medium') {
+                font-size: 50px;
+            }
         }
 
         .HeaderIcon {
